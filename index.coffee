@@ -6,8 +6,9 @@ nodes = [].slice.call document.getElementsByClassName("node")
 
 nodes.forEach (n, i)->
   #Record Group Index
-  n.group = groups.indexOf n.parentElement.parentElement
+  n.groupElement = n.parentElement.parentElement
+  n.groupIndex = groups.indexOf n.groupElement
   n.id = i
+  
   n.onclick = ->
-    console.log "im number #{n.id} of group #{n.group}"
-    
+    console.log "im number #{n.id} of group #{n.groupIndex}"
