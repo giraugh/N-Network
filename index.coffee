@@ -8,7 +8,7 @@ nodes.forEach (n, i)->
   #Record Group Index
   n.groupElement = n.parentElement.parentElement
   n.groupIndex = groups.indexOf n.groupElement
-  n.id = i
-  
+  n.nodeId = i
+
   n.onclick = ->
-    console.log "im number #{n.id} of group #{n.groupIndex}"
+    console.log "im number #{n.nodeId} of group #{n.groupIndex}"
