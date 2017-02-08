@@ -1,8 +1,26 @@
+$gray-colour: #3d3d3d
+$active-colour: #655de2
+
+//Page Stuff
+.wrapper
+  margin: 100px
+  margin-left: 150px
+
+//Node Stuff
 .nset
+  //Used to contain floating nodes
+  &::after
+    clear: both
+    content: " "
+    display: block
+
   .ngroup
     float: left
-    width: max-content
-    margin-right: 32px
+    padding-right: 16px
+    margin-right: 16px
+    border-right: 2px solid black
+    &:last-child
+      border-right: none
 
     .ncolumn
       float: left
@@ -13,6 +31,9 @@
         height: 64
         margin-right: 5px
         margin-bottom: 5px
-        background-color: black
+        background-color: $gray-colour
         border-radius: 10px
         user-select: none
+
+      .active
+        background-color: $active-colour
